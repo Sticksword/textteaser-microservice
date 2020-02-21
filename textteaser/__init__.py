@@ -1,7 +1,7 @@
-# !/usr/bin/python
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from summarizer import Summarizer
+from .summarizer import Summarizer
 
 
 class TextTeaser(object):
