@@ -1,6 +1,5 @@
-#!/usr/bin/python
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 from textteaser import TextTeaser
 
 # article source: https://blogs.dropbox.com/developers/2015/03/limitations-of-the-get-method-in-http/

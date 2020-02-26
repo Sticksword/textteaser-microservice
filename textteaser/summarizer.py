@@ -1,4 +1,4 @@
-#!/usr/bin/python
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from .parser import Parser
 
@@ -53,10 +53,10 @@ class Summarizer:
             totalScore = (titleFeature * 1.5 + keywordFrequency * 2.0 + sentenceLength * 0.5 + sentencePosition * 1.0) / 4.0
 
             summaries.append({
-                # 'titleFeature': titleFeature,
-                # 'sentenceLength': sentenceLength,
-                # 'sentencePosition': sentencePosition,
-                # 'keywordFrequency': keywordFrequency,
+                'titleFeature': titleFeature,
+                'sentenceLength': sentenceLength,
+                'sentencePosition': sentencePosition,
+                'keywordFrequency': keywordFrequency,
                 'totalScore': totalScore,
                 'sentence': sentence,
                 'order': i
@@ -64,6 +64,7 @@ class Summarizer:
 
         return summaries
 
+    # summation based selection
     def sbs(self, words, topKeywords, keywordList):
         score = 0.0
 
@@ -74,14 +75,15 @@ class Summarizer:
             word = word.lower()
             index = -1
 
-        if word in keywordList:
-            index = keywordList.index(word)
+            if word in keywordList:
+                index = keywordList.index(word)
 
-        if index > -1:
-            score += topKeywords[index]['totalScore']
+            if index > -1:
+                score += topKeywords[index]['totalScore']
 
         return 1.0 / abs(len(words)) * score
 
+    # density based selection https://iopscience.iop.org/article/10.1088/1757-899X/190/1/012048/pdf
     def dbs(self, words, topKeywords, keywordList):
         k = len(list(set(words) & set(keywordList))) + 1
         summ = 0.0

@@ -1,3 +1,5 @@
+# !/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from .summarizer import Summarizer
 
 
@@ -22,7 +24,7 @@ input['text'] = " ".join(input['text'].replace("\n", " ").split())
 
 summarizer = Summarizer()
 result = summarizer.summarize(input['text'], input['title'], 'Undefined', 'Undefined')
-result = summarizer.sortScore(result)
+# result = summarizer.sortScore(result) # unnecessary extra call
 result = summarizer.sortSentences(result[:30])
 
 print('Summary:')
