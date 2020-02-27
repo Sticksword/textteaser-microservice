@@ -54,3 +54,6 @@ docs/_build/
 
 # VS Code
 .vscode
+
+# virtualenv stuff
+textteaser-microservice
