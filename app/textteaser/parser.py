@@ -65,6 +65,19 @@ class Parser:
     def splitWords(self, sentence):
         return sentence.lower().split()
 
+    '''
+    could also try regex approach: https://github.com/xiaoxu193/PyTeaser/blob/master/pyteaser.py
+
+    from re import split as regex_split, sub as regex_sub, UNICODE as REGEX_UNICODE
+        def split_words(text):
+            #split a string into array of words
+            try:
+                text = regex_sub(r'[^\w ]', '', text, flags=REGEX_UNICODE)  # strip special chars
+                return [x.strip('.').lower() for x in text.split()]
+            except TypeError:
+                print "Error while splitting characters"
+                return None
+    '''
     def removePunctations(self, text):
         return ''.join(t for t in text if t.isalnum() or t == ' ')
 

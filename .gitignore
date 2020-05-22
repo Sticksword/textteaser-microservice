@@ -57,3 +57,7 @@ docs/_build/
 
 # virtualenv stuff
 textteaser-microservice
+
+# exploration datasets
+app/deep-text-summarization/amazon-reviews-summarization/amazon-fine-food-reviews/*
+app/deep-text-summarization/en-fr-translation/fra-eng/*
