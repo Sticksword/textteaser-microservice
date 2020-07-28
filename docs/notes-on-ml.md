@@ -89,6 +89,8 @@ What we can monitor:
 
 ### start with the ML system architecture
 
+![ml architecture image](docs/ml_system_architectures.jpg "ML System Architectures")
+
 Ask the product/use case questions:
 
 * Do you need to be able to serve predictions in real time (and if so, do you mean like, within a dozen milliseconds or after a second or two), or will delivery of predictions 30 minutes or a day after the input data is received suffice?
@@ -96,6 +98,8 @@ Ask the product/use case questions:
 * What will the demand for predictions be (i.e. traffic)?
 * What size of data are you dealing with?
 * What sort(s) of algorithms do you expect to use (and do you really need them)
+
+![example architecture image](docs/example_architecture.jpg "Example ML Architecture")
 
 ### turn experimental code into reproducible pipelines
 
