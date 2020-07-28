@@ -89,7 +89,7 @@ What we can monitor:
 
 ### start with the ML system architecture
 
-![ml architecture image](docs/ml_system_architectures.jpg "ML System Architectures")
+![ml architecture image](ml_system_architectures.jpg "ML System Architectures")
 
 Ask the product/use case questions:
 
@@ -99,7 +99,7 @@ Ask the product/use case questions:
 * What size of data are you dealing with?
 * What sort(s) of algorithms do you expect to use (and do you really need them)
 
-![example architecture image](docs/example_architecture.jpg "Example ML Architecture")
+![example architecture image](example_architecture.jpg "Example ML Architecture")
 
 ### turn experimental code into reproducible pipelines
 
